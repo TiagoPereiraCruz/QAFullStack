@@ -11,15 +11,23 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.include Capybara::DSL
+
+  config.before(:example) do 
+    page.current_window.resize_to(1280, 800)
+  end
+
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+    page.save_screenshot('log/' + nome + '.png') # if e.exception # so tira SS quando o teste falha
+  end
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome
-  Capybara.page.driver.browser.manage.window.maximize
+  config.default_driver = :selenium_chrome_headless # para executar os testes sem a abertura visivel do navegador usar o headless
+  # Capybara.page.driver.browser.manage.window.resize_to(1280, 800) -> Outra forma de fazer resize
   config.default_max_wait_time = 5
   config.app_host = 'https://training-wheels-protocol.herokuapp.com/'
 end
