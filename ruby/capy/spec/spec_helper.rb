@@ -1,6 +1,6 @@
 require 'capybara'
 require 'capybara/rspec'
-
+require 'selenium-webdriver'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -15,7 +15,7 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 
-  config.before(:example) do 
+  config.before(:example) do
     page.current_window.resize_to(1280, 800)
   end
 
