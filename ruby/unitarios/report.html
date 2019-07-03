@@ -283,15 +283,15 @@ a {
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">AvengersHeadQuarter</dt>
     <script type="text/javascript">moveProgressBar('5.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve adicionar um vingador</span><span class='duration'>0.00330s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve adicionar um vingador</span><span class='duration'>0.00200s</span></dd>
     <script type="text/javascript">moveProgressBar('10.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve adicionar uma lista de vingadores</span><span class='duration'>0.00169s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve adicionar uma lista de vingadores</span><span class='duration'>0.00166s</span></dd>
     <script type="text/javascript">moveProgressBar('15.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">thor deve ser o primeiro da lista</span><span class='duration'>0.00185s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">thor deve ser o primeiro da lista</span><span class='duration'>0.00171s</span></dd>
     <script type="text/javascript">moveProgressBar('20.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Ironman deve ser o ultimo da lista</span><span class='duration'>0.00013s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Ironman deve ser o ultimo da lista</span><span class='duration'>0.00008s</span></dd>
     <script type="text/javascript">moveProgressBar('25.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve conter o sobrenome</span><span class='duration'>0.00888s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve conter o sobrenome</span><span class='duration'>0.00175s</span></dd>
   </dl>
 </div>
 <div id="div_group_2" class="example_group passed">
@@ -308,34 +308,34 @@ a {
   <dl style="margin-left: 30px;">
   <dt id="example_group_4" class="passed">quando o valor é positivo</dt>
     <script type="text/javascript">moveProgressBar('30.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">entao atualiza saldo</span><span class='duration'>0.00244s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">entao atualiza saldo</span><span class='duration'>0.00213s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_5" class="passed">quando o saldo é zero</dt>
     <script type="text/javascript">moveProgressBar('35.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">então exibe</span><span class='duration'>0.00011s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">então exibe</span><span class='duration'>0.00010s</span></dd>
     <script type="text/javascript">moveProgressBar('40.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">e o saldo final com zeros</span><span class='duration'>0.00008s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">e o saldo final com zeros</span><span class='duration'>0.00005s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_6" class="passed">quando o saldo é insuficiente</dt>
     <script type="text/javascript">moveProgressBar('45.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00009s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00005s</span></dd>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00007s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00005s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_7" class="passed">quando supera o limite de saque</dt>
     <script type="text/javascript">moveProgressBar('55.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00008s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00005s</span></dd>
     <script type="text/javascript">moveProgressBar('60.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00007s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00004s</span></dd>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
@@ -351,39 +351,17 @@ a {
 <div id="div_group_10" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_10" class="passed">quando o valor é positivo</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_10');</script>
-    <script type="text/javascript">makeRed('example_group_10');</script>
     <script type="text/javascript">moveProgressBar('65.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">entao atualiza saldo</span>
-      <span class="duration">0.04963s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@cp.saldo).to eql 798.00
-
-    expected: 798.0
-         got: 798.01
-
-    (compared using eql?)
-  # ./spec/bank/saque_cp_spec.rb:12:in `block (4 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/bank/saque_cp_spec.rb:12:in `block (4 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">10</span>            end
-<span class="linenum">11</span>            it 'entao atualiza saldo' do
-<span class="offending"><span class="linenum">12</span>                expect(@cp.saldo).to eql 798.00</span>
-<span class="linenum">13</span>            end
-<span class="linenum">14</span>        end
-<span class="linenum">15</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">entao atualiza saldo</span><span class='duration'>0.00006s</span></dd>
   </dl>
 </div>
 <div id="div_group_11" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_11" class="passed">quando o saldo é zero</dt>
     <script type="text/javascript">moveProgressBar('70.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">então exibe</span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">então exibe</span><span class='duration'>0.00005s</span></dd>
     <script type="text/javascript">moveProgressBar('75.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">e o saldo final com zeros</span><span class='duration'>0.00005s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">e o saldo final com zeros</span><span class='duration'>0.00004s</span></dd>
   </dl>
 </div>
 <div id="div_group_12" class="example_group passed">
@@ -392,14 +370,14 @@ a {
     <script type="text/javascript">moveProgressBar('80.0');</script>
     <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00005s</span></dd>
     <script type="text/javascript">moveProgressBar('85.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00005s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00004s</span></dd>
   </dl>
 </div>
 <div id="div_group_13" class="example_group passed">
   <dl style="margin-left: 30px;">
   <dt id="example_group_13" class="passed">quando supera o limite de saque</dt>
     <script type="text/javascript">moveProgressBar('90.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00008s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">então exibe mensagem</span><span class='duration'>0.00004s</span></dd>
     <script type="text/javascript">moveProgressBar('95.0');</script>
     <dd class="example passed"><span class="passed_spec_name">e o saldo permance</span><span class='duration'>0.00004s</span></dd>
   </dl>
@@ -408,11 +386,11 @@ a {
   <dl style="margin-left: 0px;">
   <dt id="example_group_14" class="passed">suite rspec</dt>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">soma de valores</span><span class='duration'>0.00004s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">soma de valores</span><span class='duration'>0.00005s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.23325 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "20 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.01631 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "20 examples, 0 failures";</script>
 </div>
 </div>
 </body>

@@ -17,13 +17,13 @@ class Conta
 end
 
 class ContaCorrente < Conta
-    def saca(valor, max = 700, taxa = 5.00) 
+    def saca(valor, max = 700, taxa = 5.00)
         super
-    end   
+    end
 end
 
 class ContaPoupanca < Conta
-    def saca(valor, max = 500, taxa = 1.99) 
+    def saca(valor, max = 500, taxa = 2.00)
         super
     end
 end
