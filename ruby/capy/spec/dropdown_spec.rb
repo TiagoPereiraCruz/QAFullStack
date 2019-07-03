@@ -1,9 +1,9 @@
 
 
-describe 'caixa de opções', :dropdown do 
+describe 'caixa de opções', :dropdown do
 
 
-    it 'Item especifico simples' do 
+    it 'Item especifico simples' do
         visit '/dropdown'
         select('Loki', from: 'dropdown')
         sleep 3 # temporário
@@ -16,7 +16,7 @@ describe 'caixa de opções', :dropdown do
         sleep 3 # temporário
     end
 
-    it 'qualquer item', :sample do 
+    it 'qualquer item', :sample do
         visit '/dropdown'
         drop = find('.avenger-list')
         drop.all('option').sample.select_option

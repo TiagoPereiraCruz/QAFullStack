@@ -1,57 +1,56 @@
-describe 'Forms' do
+describe "Forms" do
+  it "login com sucesso", :forms, :smoke do
+    visit "/login"
 
-    it 'login com sucesso', :forms, :smoke do 
-        visit '/login'
+    fill_in "userId", with: "stark"
+    fill_in "password", with: "jarvis!"
 
-        fill_in 'userId', with: 'stark'
-        fill_in 'password', with: 'jarvis!'
-        
-        click_button 'Login'
+    click_button "Login"
 
-        expect(find('#flash').visible?).to be true
+    expect(find("#flash").visible?).to be true
 
-        expect(find('#flash').text).to include 'Olá, Tony Stark. Você acessou a área logada!'
-        
-        expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
+    expect(find("#flash").text).to include "Olá, Tony Stark. Você acessou a área logada!"
 
-        # page.save_screenshot('log/login_com_sucesso.png')
+    expect(find("#flash")).to have_content "Olá, Tony Stark. Você acessou a área logada!"
 
-    end
+    # page.save_screenshot('log/login_com_sucesso.png')
 
-    it 'senha incorreta' do 
-        visit '/login'
+  end
 
-        fill_in 'userId', with: 'stark'
-        fill_in 'password', with: 'jarvis'
+  it "senha incorreta" do
+    visit "/login"
 
-        click_button 'Login'
+    fill_in "userId", with: "stark"
+    fill_in "password", with: "jarvis"
 
-        expect(find('#flash').visible?).to be true
+    click_button "Login"
 
-        expect(find('#flash')).to have_content 'Senha é invalida!'
+    expect(find("#flash").visible?).to be true
 
-        # page.save_screenshot('log/senha_incorreta.png')
+    expect(find("#flash")).to have_content "Senha é invalida!"
 
-    end
+    # page.save_screenshot('log/senha_incorreta.png')
 
-    it 'usuário não cadastrado' do 
-        visit '/login'
+  end
 
-        fill_in 'userId', with: 'star'
-        fill_in 'password', with: 'jarvis!'
+  it "usuário não cadastrado" do
+    visit "/login"
 
-        click_button 'Login'
+    fill_in "userId", with: "star"
+    fill_in "password", with: "jarvis!"
 
-        expect(find('#flash').visible?).to be true
+    click_button "Login"
 
-        expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
+    expect(find("#flash").visible?).to be true
 
-        # page.save_screenshot('log/usuario_nao_cadastrado.png')
+    expect(find("#flash")).to have_content "O usuário informado não está cadastrado!"
 
-    end
+    # page.save_screenshot('log/usuario_nao_cadastrado.png')
 
-    # after(:each) do |e|
-    #     nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
-    #     page.save_screenshot('log/' + nome + '.png')
-    # end
+  end
+
+  # after(:each) do |e|
+  #     nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+  #     page.save_screenshot('log/' + nome + '.png')
+  # end
 end
