@@ -26,7 +26,7 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome # para executar os testes sem a abertura visivel do navegador usar o headless
+  config.default_driver = :selenium_chrome_headless # para executar os testes sem a abertura visivel do navegador usar o headless
   # Capybara.page.driver.browser.manage.window.resize_to(1280, 800) -> Outra forma de fazer resize
   config.default_max_wait_time = 15
   config.app_host = "https://training-wheels-protocol.herokuapp.com"
